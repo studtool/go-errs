@@ -1,0 +1,19 @@
+language: go
+go:
+  - "1.12"
+
+env:
+  - GO111MODULE=on
+
+install: true
+
+jobs:
+  include:
+    - stage: lint
+      script:
+        - echo "Linter checks"
+#        - make lint
+    - stage: run tests
+      script:
+        - echo "Tests"
+#        - IS_CI=true make test
